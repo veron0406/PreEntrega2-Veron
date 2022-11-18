@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/zoeicon.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Zoe | Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li class="li">
+                    <a href="tour.html">Tour</a>
+                </li>
+                <li class="li">
+                    <a href="galeria.html">Galería</a>
+                </li>
+                <li class="li">
+                    <a href="discografia.html">Discografía</a>
+                </li>
+                <li class="li">
+                    <a href="videos.html">Videos</a>
+                </li>
+                <li class="li">
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contenedor1">
+            <a href="../index.html"><img src="../img/zoeicon.png" class="logoinicio" alt="icono"></a>
+        </div>
+    </header>
+    <h1>Formulario de contacto</h1>
+    <section class="formulario">
+        <form>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombre">Nombre y apellido</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                
+                <div>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div>
+                    <label for="mensaje">Dejanos tu mensaje</label>
+                    <textarea id="mensaje" cols="30" rows="10" maxlength="10"></textarea>
+                </div>
+
+                <div>
+                    <p>Motivo</p>
+                    
+                    <label for="opcion1">Colaboración</label>
+                    <input type="radio" name="cursos" id="opcion1">
+                    <label for="opcion2">Eventos, festivales</label>
+                    <input type="radio" name="cursos" id="opcion2">
+                    <label for="opcion3">Otro</label>
+                    <input type="radio" name="cursos" id="opcion3">
+                </div>
+
+                <div>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar todo">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <footer>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum iste sit, quod reiciendis reprehenderit earum ex id omnis voluptate nihil facere, laudantium quo quas? Aperiam porro esse necessitatibus nesciunt magnam.
+    </footer>
+</body>
+</html>
