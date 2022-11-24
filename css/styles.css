@@ -1,22 +1,48 @@
 *{
-    margin:0;
     padding: 0;
+    margin: 0;
+}
+#grilla{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "header header  header  header"
+    "carrus carrus  carrus  conten1"
+    "carrus carrus  carrus  conten1"
+    "footer footer  footer  footer";
+}
+#grilla .header{
+    grid-column-start: header;
+    grid-column-end: header;
+}
+#grilla #carouselExampleControls{
+    grid-column: carrus;
+    grid-row: carrus;
+}
+#grilla .conten1{
+    grid-column-start: conten1;
+    grid-column-end: conten1;
+}
+#grilla #footer{
+    grid-row: footer;
+    grid-column: footer;
+}
+.pbajologo{
+    text-align: center;
+}
+.lilogo{
+    border-style: solid;
+    background-color: #391E46;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    transform: scale(1.2);
 }
 
-/*Todas las páginas*/
-body{
-    background-color: #160C1B;
-}
-img{
-    max-width: 100%;
-}
-footer{
-    background-image: url(../img/zoe_cat.jpg);
-    background-position: center;
-    background-size: 100vh;
-    text-align: center;
-	padding: 10px 0 90px ;
-}
+
+
 
 /*index*/
 .contenedor1{
@@ -32,31 +58,131 @@ footer{
 
 }
 @media screen and (max-width: 767px){
-    ul{
+    #grilla{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "header     header"
+        "carrus     carrus"
+        "conten1    conten1"
+        "footer     footer";
+    }
+    #grilla .header{
+        grid-column: header;
+        grid-row: header;
+    }
+    #grilla #carouselExampleControls{
+        grid-column: carrus;
+        grid-row: carrus;
+    }
+    #grilla .conten1{
+        grid-column-start: conten1;
+        grid-column-end: conten1;
+    }
+    #grilla #footer{
+        grid-row: footer;
+        grid-column: footer;
+    }
+    .conten1{
         display: flex;
         flex-direction: column;
-        width: 600px;
-        max-width: 600px;
-        min-width: 300px;
-
+        align-items: center;
     }
     .header{
-        height: 280px;
-        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #footer{
+        display: flex;
+        justify-content: center;
+    }
+    .ul_footer{
+        display: flex;
+        justify-content: space-between;
     }
 }
-.header .contenedor1 .logoinicio{
+@media screen and (max-width: 480px){
+    #grilla{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "header"
+        "carrus"
+        "conten1"
+        "footer";
+    }
+    #grilla .header{
+        grid-column: header;
+        grid-row: header;
+    }
+    #grilla #carouselExampleControls{
+        grid-column: carrus;
+        grid-row: carrus;
+    }
+    #grilla .conten1{
+        grid-column: conten1;
+        grid-row: conten1;
+    }
+    #grilla #footer{
+        grid-row: footer;
+        grid-column: footer;
+    }
+    .conten1{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .zoeletras{
+        margin-right: 50px;
+        max-width: 100%;
+        width:  auto;
+        height:  auto;
+    }
+    .header{
+    width: auto;
+    height: auto;
+    }
+    .nav{
+        display: flex;
+        justify-content: center;
+    }
+    .ul_header{
+        width: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .li{
+        width: 300px;
+    }
+    .contenedor1{
+        display: flex;
+        justify-content: center;
+    }
+    #footer{
+        display: flex;
+        justify-content: center;
+    }
+    .ul_footer{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contenedor1 .logoinicio{
     height: 63px;
     width: 63px;
     transition: all 1;
 }
-.header .contenedor1 .logoinicio:hover{
-    transform: scale(1.5);
+.logoinicio:hover{
+    transform: scale(1.05);
 }
-nav{
-    padding: 10px;
-    background-color: none;
-}
+
 ul{
     margin: 0;
     padding: 0 20px;
@@ -64,13 +190,11 @@ ul{
     display: flex;
     justify-content: space-evenly;
 }
+.li:hover{
+    transform: scale(1.05);
+}
 .li{
     border-style: solid;
-}
-li:hover{
-    font-size: 17px;
-}
-li{
     background-color: #391E46;
     padding: 5px;
     margin: 10px;
@@ -85,22 +209,9 @@ h1{
     text-align: center;
     color: blueviolet;
 }
-.divpadre{
-    font-family: 'Ubuntu', sans-serif;
-    display: flex;
-;
-}
-.divhijo1{
-    width: auto;
-    height: auto;
-    margin: 5px;
-}
-.divhijo2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-}
+
+
+
 .zoeletras{
     max-width: 100%;
     width: 400px;
@@ -108,8 +219,8 @@ h1{
 }
 .pbajologo{
     text-align: center;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 .imagenmedio{
     max-width: 100%;
@@ -121,49 +232,28 @@ p{
     color: white;
 }
 
-/*Pagina de contacto*/
-form{
-    color: white;
-    text-align: center;
-}
-.formulario{
-    margin: 0.5%;
-}
 
-/*Pagina de tour*/
-table{
+
+img{
+    max-width: 100%;
+}
+header{
+    background-color: #4D2FBD;
+}
+body{
+    background-color: #160C1B;
+    background-color: #4D2FBD;
     background-color: #391E46;
 }
-.tourform{
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    
+footer{
+    background-color: #160C1B;
 }
-
-/*Pagina galeria*/
-.vertical{
-    max-width: 100%;
-    width: 320px;
-    height: 480px;
-}
-.galeria{
+.li_footer{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    justify-content:space-evenly
+    height: 60px;
+    width: 60px;
 }
-
-/*Pagina video*/
-.videos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/*Pagina discografía*/
-.contenedordiscografia{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.p_footer1{
+    margin: 10px;
+    text-align: center;
 }
